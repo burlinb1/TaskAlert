@@ -1,29 +1,18 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="cp" value="${pageContext.request.servletContext.contextPath}" scope="request" />
+<c:set var="path" value="${pageContext.request.servletContext.contextPath}" scope="request" />
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Spring 4 Web MVC via Annotations</title>
-        <link rel="stylesheet" type="text/css" href="${cp}/resources/css/site.css" />
-        <script src="${cp}/resources/js/js.js"></script>
-        <script src="${cp}/resources/js/jquery-1.11.2.min.js"></script>
+        <title>Spring 4 Web MVC</title>
+        <link rel="stylesheet" type="text/css" href="${path}/resources/css/site.css" />
+        <script src="${path}/resources/js/js.js"></script>
+        <script src="${path}/resources/js/jquery-1.11.2.min.js"></script>
     </head>
     <body>
-        <h4>Spring 4 Web MVC via Annotations</h4>
-        Spring says: <span class="blue">Hello, ${msg1} ${msg2}</span>
-        <div>
-            <input type="button" value="Test" onclick="savePerson();" />
-            <textarea id="personJson" rows="20" cols="200">
-{
-    "firstName": "Allen",
-    "lastName": "Alda",
-    "address": {
-        "streetName":"MASH"
-    }
-}
-            </textarea>
-        </div>
+        <h4>Spring 4 Web MVC</h4>
+        <div class="blue">${msg1}</div>
+        <div class="blue">${msg2}</div>       
     </body>
 </html>
